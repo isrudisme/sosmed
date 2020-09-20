@@ -6,7 +6,7 @@ metadata:
 data:
   config.php: |
         <?php
-        $db_host = ("database-1.chscaweclwd6.ap-southeast-1.rds.amazonaws.com");
+        $db_host = ("kube.chscaweclwd6.ap-southeast-1.rds.amazonaws.com");
         $db_user = ("admin");
         $db_pass = ("123456789");
         $db_name = ("dbsosmed");
