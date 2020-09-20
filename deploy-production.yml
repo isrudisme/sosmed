@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: facebook-configmap
-  namespace: staging
+  namespace: production
 data:
   config.php: |
         <?php
@@ -22,7 +22,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: php-pesbuk
-  namespace: staging
+  namespace: production
   labels:
     app: php-pesbuk
 spec:
@@ -39,7 +39,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: php-pesbuk
-  namespace: staging
+  namespace: production
 spec:
   replicas: 3
   selector:
@@ -67,7 +67,7 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  namespace: staging
+  namespace: production
   name: pesbuk-ingress
   annotations:
 #   nginx.ingress.kubernetes.io/rewrite-target: /
