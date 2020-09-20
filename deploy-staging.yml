@@ -53,7 +53,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: php-pesbuk
-        image: isrud/sosial-media:latest
+        image: kaisarwijaya/social-media:configmap
         ports:
           - containerPort: 80
         volumeMounts:
