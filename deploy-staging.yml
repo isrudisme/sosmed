@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: facebook-configmap
-  namespace: production
+  namespace: staging
 data:
   config.php: |
         <?php
@@ -22,7 +22,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: php-pesbuk
-  namespace: production
+  namespace: staging
   labels:
     app: php-pesbuk
 spec:
@@ -39,7 +39,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: php-pesbuk
-  namespace: production
+  namespace: staging
 spec:
   replicas: 3
   selector:
@@ -67,14 +67,14 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  namespace: production
+  namespace: staging
   name: pesbuk-ingress
   annotations:
 #   nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   rules:
-  - host: pesbuk.isrudisme.xyz
+  - host: sosmed.isrudisme.xyz
     http:
       paths:
       #- path: /
