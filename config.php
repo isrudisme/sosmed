@@ -1,7 +1,7 @@
 <?php
-$db_host = getenv("DB_HOST");
-$db_user = getenv("DB_USER");
-$db_pass = getenv("DB_PASS");
+$db_host = "database-1.chscaweclwd6.ap-southeast-1.rds.amazonaws.com";
+$db_user = "admin";
+$db_pass = "123456789";
 $db_name = "dbsosmed";
 try {
 //create PDO connection
